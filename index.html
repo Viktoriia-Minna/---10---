@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>10 домашка</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<main class="page-shell">
+
+			<div class="exercise-grid">
+				<section class="exercise exercise-wide" aria-labelledby="interval-title">
+					<div class="exercise-content">
+						<h2 id="interval-title">Таймер інтервалу</h2>
+						<p>Повідомлення з’являються щосекунди. Після п’ятого інтервал автоматично зупиняється.</p>
+						<div class="toolbar">
+							<button id="start-interval" class="primary-button" type="button">Запустити таймер</button>
+							<span id="interval-status" class="status" aria-live="polite">Готово до запуску</span>
+						</div>
+						<ol id="interval-log" class="message-log" aria-live="polite"></ol>
+					</div>
+				</section>
+
+				<section class="exercise" aria-labelledby="animation-title">
+					<div class="exercise-content">
+						<h2 id="animation-title">Анімація елементів</h2>
+						<p>Фігури змінюють положення та розмір через інтервал.</p>
+						<div id="animation-stage" class="animation-stage" aria-label="Анімовані фігури">
+							<span class="shape shape-one"></span>
+							<spкan class="shape shape-two"></span>
+							<span class="shape shape-three"></span>
+						</div>
+						<button id="toggle-animation" class="secondary-button" type="button">Зупинити анімацію</button>
+					</div>
+				</section>
+
+				<section class="exercise" aria-labelledby="game-title">
+					<div class="exercise-content">
+						<h2 id="game-title">Влуч у ціль</h2>
+						<p>Натискай на коло, поки не завершиться 15-секундний раунд.</p>
+						<div class="scoreboard">
+							<div><span>Очки</span><strong id="score">0</strong></div>
+							<div><span>Час</span><strong><span id="game-time">15</span> с</strong></div>
+							<div><span>Натискання</span><strong id="clicks">0</strong></div>
+						</div>
+						<div id="game-arena" class="game-arena">
+							<button id="target" class="target" type="button" aria-label="Натисни на ціль"></button>
+							<span id="game-message" class="game-message">Натисни «Почати гру»</span>
+						</div>
+						<button id="start-game" class="primary-button" type="button">Почати гру</button>
+					</div>
+				</section>
+
+				<section class="exercise exercise-wide" aria-labelledby="countdown-title">
+								<div class="exercise-content">
+						<h2 id="countdown-title">Контроль часу</h2>
+						<p>Введи кількість секунд і дочекайся повідомлення після завершення відліку.</p>
+						<form id="countdown-form" class="countdown-form">
+							<label for="seconds">Секунди</label>
+							<input id="seconds" type="number" min="1" max="3600" value="5" required />
+							<button class="primary-button" type="submit">Запустити відлік</button>
+						</form>
+						<div id="countdown-output" class="countdown-output" aria-live="polite">Вкажи час, щоб почати.</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<script src="main.js"></script>
+	</body>
+</html>
